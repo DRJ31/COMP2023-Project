@@ -3,8 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Fruit Pairs</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+    <link rel="stylesheet" href="assest/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <script src="assest/game.js"></script>
+    <script src="assest/elements.js"></script>
 </head>
 <body>
+<div class="header">Fruit Pairs <span id="righttext" onclick="showlogin()">Log in</span></div>
+<div id="login">
+    <input type="text" id="getusername" onfocus="changeborder()" onfocusout="recoverborder()">
+    <button class="checkbutton">Login</button>
+    <button class="checkbutton" onclick="hidelogin()">Cancel</button>
+</div>
+<!--contents in the left of the page-->
+<div class="leftcol">
+    <div id="maingame">
+        <div id="blackbg"></div>
+        <!--welcome part and level choosing part-->
+        <div id="gametitle">Fruit <span class="titlespan">Pair</span></div>
+        <div id="startbutton"><img src="assest/play.png" alt=""></div>
+        <div class="levels" id="level1">2x2</div>
+        <div class="levels" id="level2">4x4</div>
+        <div class="levels" id="level3">6x6</div>
 
+        <!--game part begin-->
+        <div class="gamedata">
+            <div class="words">Time</div>
+            <div class="datacontainer">1:03</div>
+            <div class="words">Remain</div>
+            <div class="datacontainer">5 Pairs</div>
+        </div>
+        <div class="pause"><b>||</b></div>
+    </div>
+</div>
+<!--contents in the right of the page-->
+<div class="rightcol">
+    <div class="user">
+        <h1 id="username">Guest</h1><!--set limit of 12 letters-->
+        <p>Username</p>
+    </div>
+    <div class="footer">
+        ©Copyright UIC-PANICS <br/>
+        All Rights Reserved
+        <p>Developers: </p>
+        <ul>
+            <li>Renjie Deng l630003010</li>
+            <li>Qingbo Li l630003028</li>
+            <li>Anqin Zha l6300001</li>
+        </ul>
+        Group I @ SDWI 2017 <br/>
+        Version 1.0
+    </div>
+</div>
 </body>
 </html>
