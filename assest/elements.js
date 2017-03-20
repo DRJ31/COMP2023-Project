@@ -9,6 +9,8 @@ window.onload=function () {
     elements[5]=document.getElementById("level3");
     elements[6]=document.getElementById("getusername");
     elements[7]=document.getElementById("login");
+    elements[8]=document.getElementById("time");
+    elements[9]=document.getElementById("remain");
 };
 
 function changeborder() {
@@ -32,4 +34,9 @@ function showlogin(){//show login div
 function hidelogin() {//hide login div
     elements[7].style.transform="translate3d(0,0,0)";
     countlogin--;
+}
+
+function getid(idname){//shorter function for document.getelementbyid
+    var element=document.getElementById(idname);
+    return element;
 }

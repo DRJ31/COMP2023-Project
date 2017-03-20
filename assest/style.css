@@ -5,6 +5,7 @@ Directory:
 3. level choosing
 4. login
 5. game
+6. fixed part
 */
 body{
     width: 1024px;
@@ -204,6 +205,7 @@ input[type="text"]{
     color: white;
     padding-left: 5%;
     padding-right: 5%;
+    cursor: default;
 }
 
 .datacontainer{/*container of time and remain number*/
@@ -238,4 +240,45 @@ input[type="text"]{
     float: right;
     margin-top: 10px;
     margin-right: 20px;
+    cursor: pointer;
+}
+
+#game{
+    width: 500px;
+    height: 500px;
+    margin:auto;
+    background-color: white;
+    margin-top: 50px;
+}
+
+.img4{
+    width: 25%;
+    height: 125px;
+    float: left;
+    background-color: white;
+}
+
+.img4 img{
+    width: 100%;
+}
+/*game part end*/
+
+/*fixed part begin*/
+#pausediv{
+    width: 400px;
+    height: 400px;
+    margin:auto;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #03a9f4;
+    color: white;
+}
+#pausediv h1{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 45px;
 }
