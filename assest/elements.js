@@ -1,5 +1,6 @@
 var elements=[];//array of elements you may need to get
 var countlogin=0;//count how many time you have clicked log in
+var origintime=[];
 window.onload=function () {
     elements[0]=document.getElementById("righttext");
     elements[1]=document.getElementById("gametitle");
@@ -37,6 +38,10 @@ function hidelogin() {//hide login div
 }
 
 function getid(idname){//shorter function for document.getelementbyid
-    var element=document.getElementById(idname);
-    return element;
+    return document.getElementById(idname);
+}
+
+function counttime() {
+    var days=new Date();
+    return (days.getMinutes()*60+days.getSeconds()-origintime[1]*60-origintime[2]);
 }

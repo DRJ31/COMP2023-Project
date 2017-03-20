@@ -255,7 +255,6 @@ input[type="text"]{
     width: 25%;
     height: 125px;
     float: left;
-    background-color: white;
 }
 
 .img4 img{
@@ -264,7 +263,7 @@ input[type="text"]{
 /*game part end*/
 
 /*fixed part begin*/
-#pausediv{
+#pausediv{/*div of pause*/
     width: 400px;
     height: 400px;
     margin:auto;
@@ -276,9 +275,90 @@ input[type="text"]{
     border-radius: 10px;
     background-color: #03a9f4;
     color: white;
+    display: none;
 }
 #pausediv h1{
     text-align: center;
     margin-top: 80px;
     font-size: 45px;
+}
+
+.pausebtn{/*buttons in pause div*/
+    border-radius: 5px;
+    background-color: #5ce8fa;
+    float: left;
+    width: 30%;
+    margin-left: 2.5%;
+    height: 50px;
+    font-size: 30px;
+    margin-top: 130px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.ranks{/*container of all ranks*/
+    background-color: #88481e;
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    margin: auto;
+    cursor: default;
+}
+
+.ranks h1{
+    font-size: 60px;
+    margin-top: -40px;
+    color: #facb36;
+    text-align: center;
+}
+
+.rankdiv{/*the container of username and score*/
+    width: 70%;
+    margin:auto;
+    color: white;
+    background-color: #361b09;
+    height: 60px;
+    font-size: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #5f2900;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.name{/*class of span name*/
+    color: #c87d1b;
+}
+
+.score{/*class of span score*/
+    float: right;
+}
+
+.rankbtn{
+    float: left;
+    height: 50px;
+    font-size: 30px;
+    width: 35%;
+    margin-left: 10%;
+    background-color: #ff930f;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.img6{
+    width: 16.666%;
+    height: 83.333px;
+    float: left;
+}
+
+.img2{
+    width: 50%;
+    height: 250px;
+    float: left;
 }
