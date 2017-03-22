@@ -18,7 +18,6 @@ while($row=mysqli_fetch_array($retval,MYSQLI_ASSOC))
     array_push($arr,array($row["username"],$row["score"]));
 }
 echo "Done!";
-//echo $retval;
 for ($i=0;$i<count($arr);$i++){
     if($i==count($arr)-1){
         echo "[".$arr[$i][0].",".$arr[$i][1]."]";
@@ -28,4 +27,3 @@ for ($i=0;$i<count($arr);$i++){
     }
 }
 mysqli_close($conn);
-

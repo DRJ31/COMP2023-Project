@@ -9,9 +9,9 @@ if(!$conn){
 $username="Google";
 $score=233;
 $insertdata="INSERT INTO fruit_score".
-            "(username, score)".
+            "(username, score, date, time)".
             "VALUES".
-            "('$username','$score')";
+            "('$username','$score',NOW(),NOW())";
 mysqli_select_db($conn,'demonist');
 $retval=mysqli_query($conn,$insertdata);
 if(!$retval){
