@@ -1,3 +1,8 @@
+<html>
+<head>
+    <title>loading...</title>
+</head>
+<body>
 <?php
 $dbhost='';//host
 $dbuser='';//username
@@ -17,5 +22,9 @@ $retval=mysql_query($insertdata);
 if(!$retval){
     die('Could not insert data!');
 }
-echo "Yeah!";
+echo "<script>alert('Success!');window.location.href='index.php';</script>";
 mysql_close($conn);
+?>
+</body>
+</html>
+
