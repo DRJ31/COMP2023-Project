@@ -3,8 +3,9 @@ Directory:
 1. main frame
 2. welcome page
 3. level choosing
-5. game
-6. fixed part
+4. game
+5. fixed part
+6. main part
 */
 body{
     width: 1024px;
@@ -116,7 +117,7 @@ button{
     text-align: center;
     padding-top: 80px;
     font-size: 70px;
-    display: none;
+    /*display: none;*/
 }
 .titlespan{/*class of "pair"*/
     color: #ace301;
@@ -131,7 +132,7 @@ button{
     text-align: center;
     cursor: pointer;
     box-shadow: 0 5px 10px #666;
-    display: none;
+    /*display: none;*/
 }
 
 #startbutton img{
@@ -178,7 +179,7 @@ input[type="text"]{
 /*login part end*/
 
 /*game part begin*/
-.gamedata{/*top container*/
+#gamedata{/*top container*/
     background-color: #9f5a1d;
     border-radius: 10px;
     height: 100px;
@@ -189,6 +190,7 @@ input[type="text"]{
     padding-left: 5%;
     padding-right: 5%;
     cursor: default;
+    display: none;
 }
 
 .datacontainer{/*container of time and remain number*/
@@ -212,7 +214,7 @@ input[type="text"]{
     float: left;
 }
 
-.pause{/*pause button*/
+#pause{/*pause button*/
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -224,6 +226,7 @@ input[type="text"]{
     margin-top: 10px;
     margin-right: 20px;
     cursor: pointer;
+    display: none;
 }
 
 #game{
@@ -232,6 +235,7 @@ input[type="text"]{
     margin:auto;
     background-color: white;
     margin-top: 50px;
+    display: none;
 }
 
 .img4{
