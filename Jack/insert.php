@@ -1,13 +1,13 @@
 <?php
-$dbhost='';//host
-$dbuser='';//username
-$dbpass='';//password
+$dbhost='45.78.44.25:3306';//host
+$dbuser='demonist';//username
+$dbpass='008691';//password
 $conn=mysqli_connect($dbhost,$dbuser,$dbpass);
 if(!$conn){
     die('Could not connect: '.mysqli_error($conn));
 }
 $username="Google";
-$score=233;
+$score=835;
 $insertdata="INSERT INTO fruit_score".
             "(username, score, date, time)".
             "VALUES".

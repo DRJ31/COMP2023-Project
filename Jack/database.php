@@ -14,9 +14,9 @@ function getClientIP()
 $ipadd=getClientIP();
 $ua=$_SERVER['HTTP_USER_AGENT'];
 $arr=array();
-$dbhost='';//host
-$dbuser='';//username
-$dbpass='';//password
+$dbhost='45.78.44.25:3306';//host
+$dbuser='demonist';//username
+$dbpass='008691';//password
 $conn=mysqli_connect($dbhost,$dbuser,$dbpass);
 if (!$conn){
     die('Could not connect: '.mysqli_error($conn));
