@@ -360,3 +360,8 @@ input[type="submit"]{
     border-radius: 5px;
     border: 1px solid #ff930f;
 }
+
+#p1{
+    background-image: url("../img/1.png");
+    /*background-size: cover;*/
+}

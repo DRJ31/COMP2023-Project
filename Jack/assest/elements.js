@@ -89,7 +89,7 @@ function startgame(){//function while click start button
 function randomsrc(){//function to randomly src photos
         getrandom();
         for(var i=1;i<=16;i++){
-            getid("p"+i).setAttribute("src",'img/'+randomarr[i-1]+'.png');console.log(true);
+            getid("p"+i).style.backgroundImage='url("img/'+randomarr[i-1]+'.png")';
         }
 }
 
