@@ -3,9 +3,9 @@ Directory:
 1. main frame
 2. welcome page
 3. level choosing
-4. login
-5. game
-6. fixed part
+4. game
+5. fixed part
+6. main part
 */
 body{
     width: 1024px;
@@ -117,7 +117,7 @@ button{
     text-align: center;
     padding-top: 80px;
     font-size: 70px;
-    display: none;
+    /*display: none;*/
 }
 .titlespan{/*class of "pair"*/
     color: #ace301;
@@ -132,29 +132,13 @@ button{
     text-align: center;
     cursor: pointer;
     box-shadow: 0 5px 10px #666;
-    display: none;
+    /*display: none;*/
 }
 
 #startbutton img{
     width: 100px;
 }
 /*welcome part end*/
-
-/*level choosing part begin*/
-.levels{
-    width: 80%;
-    margin: auto;
-    height: 100px;
-    background-color: #fff100;
-    color: white;
-    font-size: 60px;
-    border-radius: 10px;
-    margin-top: 40px;
-    text-align: center;
-    cursor: pointer;
-    display: none;
-}
-/*level choosing part end*/
 /*login part start*/
 #login{/*login confirm*/
     width: 300px;
@@ -195,7 +179,7 @@ input[type="text"]{
 /*login part end*/
 
 /*game part begin*/
-.gamedata{/*top container*/
+#gamedata{/*top container*/
     background-color: #9f5a1d;
     border-radius: 10px;
     height: 100px;
@@ -206,6 +190,7 @@ input[type="text"]{
     padding-left: 5%;
     padding-right: 5%;
     cursor: default;
+    display: none;
 }
 
 .datacontainer{/*container of time and remain number*/
@@ -229,7 +214,7 @@ input[type="text"]{
     float: left;
 }
 
-.pause{/*pause button*/
+#pause{/*pause button*/
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -241,6 +226,7 @@ input[type="text"]{
     margin-top: 10px;
     margin-right: 20px;
     cursor: pointer;
+    display: none;
 }
 
 #game{
@@ -249,6 +235,7 @@ input[type="text"]{
     margin:auto;
     background-color: white;
     margin-top: 50px;
+    display: none;
 }
 
 .img4{
@@ -317,7 +304,7 @@ input[type="text"]{
 }
 
 .rankdiv{/*the container of username and score*/
-    width: 70%;
+    width: 80%;
     margin:auto;
     color: white;
     background-color: #361b09;
@@ -351,14 +338,25 @@ input[type="text"]{
     cursor: pointer;
 }
 
-.img6{
-    width: 16.666%;
-    height: 83.333px;
-    float: left;
+.globalbtn{
+    width: 70%;
+    margin-left:auto;
+    margin-right: auto;
+    height: 50px;
+    font-size: 30px;
+    background-color: #ff930f;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 130px;
 }
 
-.img2{
-    width: 50%;
-    height: 250px;
-    float: left;
+input[type="submit"]{
+    background-color: #ff930f;
+    color: white;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #ff930f;
 }

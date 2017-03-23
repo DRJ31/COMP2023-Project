@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb52173b-23d9-4cff-8ce4-0e508c92f7a9" name="Default" comment="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Jack/phpinfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Jack/database.php" afterPath="$PROJECT_DIR$/Jack/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Jack/insert.php" afterPath="$PROJECT_DIR$/Jack/insert.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +26,16 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Jack/index.html">
               <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" column="107" lean-forward="false" selection-start-line="14" selection-start-column="107" selection-end-line="14" selection-end-column="107" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="algorithm.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Jack/assest/algorithm.js">
+              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
@@ -30,12 +46,24 @@
           <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Jack/database.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="622">
-                  <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+                <state relative-caret-position="119">
+                  <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+                  <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+                  <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
                   <folding>
-                    <marker date="1490195414127" expanded="true" signature="581:606" ph="SELECT * FRO... fruit_score" />
-                    <marker date="1490195414127" expanded="true" signature="1078:1190" ph="INSERT INTO userinfo... " />
+                    <marker date="1490253733148" expanded="true" signature="559:584" ph="SELECT * FRO... fruit_score" />
+                    <marker date="1490253733148" expanded="true" signature="1022:1134" ph="INSERT INTO userinfo... " />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="phpinfo.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Jack/phpinfo.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -43,7 +71,7 @@
           <file leaf-file-name="insert.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Jack/insert.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="19">
+                <state relative-caret-position="17">
                   <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
                   <folding />
                 </state>
@@ -57,11 +85,33 @@
           <file leaf-file-name="insert.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Jack/insert.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="15" column="20" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="19" selection-end-column="16" />
+                <state relative-caret-position="-153">
+                  <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+                  <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+                  <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
                   <folding>
-                    <marker date="1490194401971" expanded="true" signature="226:366" ph="INSERT INTO fruit_score... " />
+                    <marker date="1490253733180" expanded="true" signature="204:344" ph="INSERT INTO fruit_score... " />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="elements.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Jack/assest/elements.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1751">
+                  <caret line="103" column="34" lean-forward="false" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Jack/assest/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4199">
+                  <caret line="247" column="16" lean-forward="false" selection-start-line="247" selection-start-column="16" selection-end-line="247" selection-end-column="16" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -83,16 +133,21 @@
     <findStrings>
       <find>hhh</find>
       <find>mainframe</find>
-      <find>pause</find>
       <find>maing</find>
       <find>img4</find>
       <find>game</find>
+      <find>start</find>
+      <find>pause</find>
+      <find>elements[6]</find>
+      <find>img</find>
     </findStrings>
     <replaceStrings>
       <replace>rank</replace>
+      <replace>getusername</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -104,6 +159,10 @@
         <option value="$PROJECT_DIR$/assest/elements.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assest/style.css" />
+        <option value="$PROJECT_DIR$/Jack/assest/style.css" />
+        <option value="$PROJECT_DIR$/Jack/assest/elements.js" />
+        <option value="$PROJECT_DIR$/Jack/index.html" />
+        <option value="$PROJECT_DIR$/Jack/phpinfo.php" />
         <option value="$PROJECT_DIR$/Jack/insert.php" />
         <option value="$PROJECT_DIR$/Jack/database.php" />
       </list>
@@ -115,12 +174,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="2576" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -137,27 +196,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sdwigp" />
+              <option name="myItemId" value="wsigp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sdwigp" />
+              <option name="myItemId" value="wsigp" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sdwigp" />
+              <option name="myItemId" value="wsigp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sdwigp" />
+              <option name="myItemId" value="wsigp" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -165,8 +222,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wsigp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wsigp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jack" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assest" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,9 +252,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="PHP Script.database.php">
+  <component name="RunManager" selected="PHP Script.insert.php">
     <configuration default="false" name="database.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Jack/database.php">
       <method />
     </configuration>
@@ -246,8 +323,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.database.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.insert.php" />
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.insert.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.database.php" />
       </list>
     </recent_temporary>
   </component>
@@ -271,11 +348,15 @@
       <workItem from="1490177679084" duration="656000" />
       <workItem from="1490179157714" duration="8299000" />
       <workItem from="1490194320650" duration="1306000" />
+      <workItem from="1490194320650" duration="1280000" />
+      <workItem from="1490235535625" duration="5646000" />
+      <workItem from="1490244762190" duration="7304000" />
+      <workItem from="1490253696044" duration="37000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40004000" />
+    <option name="totallyTimeSpent" value="52965000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,10 +368,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06523438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -302,7 +382,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32943678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -320,6 +400,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Jack/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding>
+            <marker date="1490253733148" expanded="true" signature="559:584" ph="SELECT * FRO... fruit_score" />
+            <marker date="1490253733148" expanded="true" signature="1022:1134" ph="INSERT INTO userinfo... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jack/insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Jack/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -333,8 +432,8 @@
         <state relative-caret-position="76">
           <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding>
-            <marker date="1490195414127" expanded="true" signature="581:606" ph="SELECT * FRO... fruit_score" />
-            <marker date="1490195414127" expanded="true" signature="1078:1190" ph="INSERT INTO userinfo... " />
+            <marker date="1490253733148" expanded="true" signature="559:584" ph="SELECT * FRO... fruit_score" />
+            <marker date="1490253733148" expanded="true" signature="1022:1134" ph="INSERT INTO userinfo... " />
           </folding>
         </state>
       </provider>
@@ -360,8 +459,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1490195414127" expanded="true" signature="581:606" ph="SELECT * FRO... fruit_score" />
-            <marker date="1490195414127" expanded="true" signature="1078:1190" ph="INSERT INTO userinfo... " />
+            <marker date="1490253733148" expanded="true" signature="559:584" ph="SELECT * FRO... fruit_score" />
+            <marker date="1490253733148" expanded="true" signature="1022:1134" ph="INSERT INTO userinfo... " />
           </folding>
         </state>
       </provider>
@@ -403,7 +502,7 @@
     <entry file="file://$PROJECT_DIR$/assest/elements.js" />
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/assest/style.css" />
-    <entry file="file://$PROJECT_DIR$/Jack/index.html">
+    <entry file="file://$PROJECT_DIR$/Jack/assest/algorithm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -411,9 +510,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Jack/assest/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4199">
+          <caret line="247" column="16" lean-forward="false" selection-start-line="247" selection-start-column="16" selection-end-line="247" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jack/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="107" lean-forward="false" selection-start-line="14" selection-start-column="107" selection-end-line="14" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jack/assest/elements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="103" column="34" lean-forward="false" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jack/phpinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Jack/insert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state relative-caret-position="17">
           <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
           <folding />
         </state>
@@ -421,11 +552,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jack/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        <state relative-caret-position="119">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
           <folding>
-            <marker date="1490195414127" expanded="true" signature="581:606" ph="SELECT * FRO... fruit_score" />
-            <marker date="1490195414127" expanded="true" signature="1078:1190" ph="INSERT INTO userinfo... " />
+            <marker date="1490253733148" expanded="true" signature="559:584" ph="SELECT * FRO... fruit_score" />
+            <marker date="1490253733148" expanded="true" signature="1022:1134" ph="INSERT INTO userinfo... " />
           </folding>
         </state>
       </provider>

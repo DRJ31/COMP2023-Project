@@ -12,8 +12,8 @@
 <body>
 <div class="header">Fruit Pairs <span id="righttext" onclick="showlogin()">Log in</span></div>
 <div id="login">
-    <input type="text" id="getusername" onfocus="changeborder()" onfocusout="recoverborder()">
-    <button class="checkbutton">Login</button>
+    <input type="text" id="getusername" onfocus="changeborder()" onfocusout="recoverborder()" maxlength="10">
+    <button class="checkbutton" onclick="log_in()">Login</button>
     <button class="checkbutton" onclick="hidelogin()">Cancel</button>
 </div>
 <!--contents in the left of the page-->
@@ -29,51 +29,50 @@
             </div>
             <div class="ranks">
                 <h1>Top List</h1>
-                <div class="rankdiv">1 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">2 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">3 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">4 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">5 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">6 <span class="name">Guest</span> <span class="score">1:00</span></div>
+                <form action="insert.php" method="post">
+                <div class="rankdiv">1 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                <div class="rankdiv">2 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                <div class="rankdiv">3 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                <div class="rankdiv">4 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                <div class="rankdiv">5 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                </form>
                 <div class="rankbtn">Replay</div>
                 <div class="rankbtn">Menu</div>
+                <div class="globalbtn">Global Rank</div>
             </div>
         </div>
         <!--welcome part and level choosing part-->
         <div id="gametitle">Fruit <span class="titlespan">Pair</span></div>
-        <div id="startbutton"><img src="assest/play.png" alt=""></div>
-        <div class="levels" id="level1">2x2</div>
-        <div class="levels" id="level2">4x4</div>
-        <div class="levels" id="level3">6x6</div>
+        <div id="startbutton" onclick="startgame()"><img src="assest/play.png" alt=""></div>
 
         <!--game part begin-->
         <!--top bar-->
-        <div class="gamedata">
+        <div id="gamedata">
             <div class="words">Time</div>
-            <div class="datacontainer" id="time">1:03</div>
+            <div class="datacontainer" id="time">0:00</div>
             <div class="words">Remain</div>
             <div class="datacontainer" id="remain">5 Pairs</div>
         </div>
-        <div class="pause"><b>||</b></div><!--pause button-->
+        <div id="pause"><b>||</b></div><!--pause button-->
 
         <!--main game container-->
         <div id="game">
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="1"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="2"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="3"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="4"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="5"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="6"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="7"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="8"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="9"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="10"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="11"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="12"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="13"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="14"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="15"></div>
-            <div class="img4"><img src="img/cardback.png" alt=""><img src="" alt="" id="16"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p1"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p2"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p3"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p4"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p5"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p6"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p7"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p8"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p9"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p10"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p11"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p12"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p13"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p14"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p15"></div>
+            <div class="img4"><img src="img/cardback.png" alt="" onclick="cardback(this)"><img src="" alt="" id="p16"></div>
         </div>
     </div>
 </div>
