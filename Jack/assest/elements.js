@@ -1,6 +1,8 @@
 var elements=[];//array of elements you may need to get
 var countlogin=0;//count how many time you have clicked log in
-var origintime=[];
+var randomarr=[];
+var intervals;
+var regexp=/[^\D]\d/g;
 window.onload=function () {
     elements[0]=document.getElementById("righttext");
     elements[1]=document.getElementById("gametitle");
@@ -42,6 +44,44 @@ function getid(idname){//shorter function for document.getelementbyid
 }
 
 function counttime() {
-    var days=new Date();
-    return (days.getMinutes()*60+days.getSeconds()-origintime[1]*60-origintime[2]);
+    var regarr=getid("time").innerHTML.match(regexp);
+    var now=parseInt(getid("time").innerHTML)+1;
+    return calculatetime(now);
+}
+
+function getrandom(){//randomly src photos
+    while(randomarr.length<16){
+        var num=Math.floor(Math.random()*16);
+        var counter=0;
+        for(var j=0;j<randomarr.length;j++){
+            if(num==randomarr[j]){
+                counter++;
+            }
+        }
+        if(counter==0){
+            randomarr.push(num);
+        }
+    }
+}
+
+function begintime(){
+    intervals=setInterval(function () {
+        getid("time").innerHTML=counttime();
+    },1000);
+}
+
+function calculatetime(times){
+    var str="";
+    var min=Math.floor(times/60);
+    var seconds=times%60;
+    if(times%60<10){
+        str=min+":0"+seconds;
+    }
+    else if(times<60){
+        str="0:"+times;
+    }
+    else{
+        str=min+":"+seconds;
+    }
+    return str;
 }

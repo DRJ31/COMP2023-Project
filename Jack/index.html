@@ -29,28 +29,27 @@
             </div>
             <div class="ranks">
                 <h1>Top List</h1>
-                <div class="rankdiv">1 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">2 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">3 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">4 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">5 <span class="name">Guest</span> <span class="score">1:00</span></div>
-                <div class="rankdiv">6 <span class="name">Guest</span> <span class="score">1:00</span></div>
+                <form action="insert.php" method="post">
+                <div class="rankdiv">1 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                <div class="rankdiv">2 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                <div class="rankdiv">3 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                <div class="rankdiv">4 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                <div class="rankdiv">5 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                </form>
                 <div class="rankbtn">Replay</div>
                 <div class="rankbtn">Menu</div>
+                <div class="globalbtn">Global Rank</div>
             </div>
         </div>
         <!--welcome part and level choosing part-->
         <div id="gametitle">Fruit <span class="titlespan">Pair</span></div>
         <div id="startbutton"><img src="assest/play.png" alt=""></div>
-        <div class="levels" id="level1">2x2</div>
-        <div class="levels" id="level2">4x4</div>
-        <div class="levels" id="level3">6x6</div>
 
         <!--game part begin-->
         <!--top bar-->
         <div class="gamedata">
             <div class="words">Time</div>
-            <div class="datacontainer" id="time">1:03</div>
+            <div class="datacontainer" id="time">0:00</div>
             <div class="words">Remain</div>
             <div class="datacontainer" id="remain">5 Pairs</div>
         </div>
