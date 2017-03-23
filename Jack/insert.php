@@ -1,21 +1,21 @@
 <?php
-$dbhost='45.78.44.25:3306';//host
-$dbuser='demonist';//username
-$dbpass='008691';//password
-$conn=mysqli_connect($dbhost,$dbuser,$dbpass);
+$dbhost='';//host
+$dbuser='';//username
+$dbpass='';//password
+$conn=mysql_connect($dbhost,$dbuser,$dbpass);
 if(!$conn){
-    die('Could not connect: '.mysqli_error($conn));
+    die('Could not connect!');
 }
-$username="Google";
-$score=835;
+$username=$_POST["uploadname"];
+$score=$_POST["uploadscore"];
 $insertdata="INSERT INTO fruit_score".
-            "(username, score, date, time)".
-            "VALUES".
-            "('$username','$score',NOW(),NOW())";
-mysqli_select_db($conn,'demonist');
-$retval=mysqli_query($conn,$insertdata);
+    "(username, score, date, time)".
+    "VALUES".
+    "('$username','$score',NOW(),NOW())";
+mysql_select_db('demonist');
+$retval=mysql_query($insertdata);
 if(!$retval){
-    die('Could not insert data'.mysqli_error($conn));
+    die('Could not insert data!');
 }
-echo "Success!";
-mysqli_close($conn);
+echo "Yeah!";
+mysql_close($conn);

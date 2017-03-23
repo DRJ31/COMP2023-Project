@@ -14,20 +14,20 @@ function getClientIP()
 $ipadd=getClientIP();
 $ua=$_SERVER['HTTP_USER_AGENT'];
 $arr=array();
-$dbhost='45.78.44.25:3306';//host
-$dbuser='demonist';//username
-$dbpass='008691';//password
-$conn=mysqli_connect($dbhost,$dbuser,$dbpass);
+$dbhost='';//host
+$dbuser='';//username
+$dbpass='';//password
+$conn=mysql_connect($dbhost,$dbuser,$dbpass);
 if (!$conn){
-    die('Could not connect: '.mysqli_error($conn));
+    die('Could not connect!');
 }
 $getdata="SELECT * FROM fruit_score";
-mysqli_select_db($conn,'demonist');
-$retval=mysqli_query($conn,$getdata);
+mysql_select_db('demonist');
+$retval=mysql_query($getdata);
 if(!$retval){
-    die('Could not get data'.mysqli_error($conn));
+    die('Could not get data!');
 }
-while($row=mysqli_fetch_array($retval,MYSQLI_ASSOC))
+while($row=mysql_fetch_array($retval,MYSQLI_ASSOC))
 {
     array_push($arr,array($row["username"],$row["score"]));
 }
@@ -44,10 +44,10 @@ $insertdata="INSERT INTO userinfo".
     "(useragent, ipaddress, date, time)".
     "VALUES".
     "('$ua','$ipadd',NOW(),NOW())";
-mysqli_select_db($conn,'demonist');
-$retval=mysqli_query($conn,$insertdata);
+mysql_select_db('demonist');
+$retval=mysql_query($insertdata);
 if(!$retval){
-    die('Could not insert data'.mysqli_error($conn));
+    die('Could not insert data!');
 }
 echo "Success!";
-mysqli_close($conn);
+mysql_close($conn);

@@ -3,9 +3,9 @@ Directory:
 1. main frame
 2. welcome page
 3. level choosing
-4. login
-5. game
-6. fixed part
+4. game
+5. fixed part
+6. main part
 */
 body{
     width: 1024px;
@@ -102,6 +102,7 @@ button{
     padding-top: 20px;
     line-height: 30px;
     cursor: default;
+    margin-bottom: 20px;
 }
 
 .footer ul, .footer p{
@@ -117,7 +118,6 @@ button{
     text-align: center;
     padding-top: 80px;
     font-size: 70px;
-    display: none;
 }
 .titlespan{/*class of "pair"*/
     color: #ace301;
@@ -132,29 +132,13 @@ button{
     text-align: center;
     cursor: pointer;
     box-shadow: 0 5px 10px #666;
-    display: none;
 }
 
 #startbutton img{
     width: 100px;
+    transition: 0.2s;
 }
 /*welcome part end*/
-
-/*level choosing part begin*/
-.levels{
-    width: 80%;
-    margin: auto;
-    height: 100px;
-    background-color: #fff100;
-    color: white;
-    font-size: 60px;
-    border-radius: 10px;
-    margin-top: 40px;
-    text-align: center;
-    cursor: pointer;
-    display: none;
-}
-/*level choosing part end*/
 /*login part start*/
 #login{/*login confirm*/
     width: 300px;
@@ -167,6 +151,7 @@ button{
     margin-left: 720px;
     transition: 0.2s;
     margin-top: -160px;
+    z-index: 100;
 }
 
 input[type="text"]{
@@ -195,7 +180,7 @@ input[type="text"]{
 /*login part end*/
 
 /*game part begin*/
-.gamedata{/*top container*/
+#gamedata{/*top container*/
     background-color: #9f5a1d;
     border-radius: 10px;
     height: 100px;
@@ -206,6 +191,7 @@ input[type="text"]{
     padding-left: 5%;
     padding-right: 5%;
     cursor: default;
+    display: none;
 }
 
 .datacontainer{/*container of time and remain number*/
@@ -229,7 +215,7 @@ input[type="text"]{
     float: left;
 }
 
-.pause{/*pause button*/
+#pause{/*pause button*/
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -241,6 +227,7 @@ input[type="text"]{
     margin-top: 10px;
     margin-right: 20px;
     cursor: pointer;
+    display: none;
 }
 
 #game{
@@ -249,6 +236,7 @@ input[type="text"]{
     margin:auto;
     background-color: white;
     margin-top: 50px;
+    display: none;
 }
 
 .img4{
@@ -287,8 +275,8 @@ input[type="text"]{
     border-radius: 5px;
     background-color: #5ce8fa;
     float: left;
-    width: 30%;
-    margin-left: 2.5%;
+    width: 35%;
+    margin-left: 10%;
     height: 50px;
     font-size: 30px;
     margin-top: 130px;
@@ -307,6 +295,7 @@ input[type="text"]{
     bottom:0;
     margin: auto;
     cursor: default;
+    display: none;
 }
 
 .ranks h1{
@@ -317,7 +306,7 @@ input[type="text"]{
 }
 
 .rankdiv{/*the container of username and score*/
-    width: 70%;
+    width: 80%;
     margin:auto;
     color: white;
     background-color: #361b09;
@@ -351,14 +340,113 @@ input[type="text"]{
     cursor: pointer;
 }
 
-.img6{
-    width: 16.666%;
-    height: 83.333px;
-    float: left;
+input[type="submit"]{
+    background-color: #ff930f;
+    color: white;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #ff930f;
+    float: right;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: none;
 }
 
-.img2{
-    width: 50%;
-    height: 250px;
-    float: left;
+@media(max-width: 1023px){/*for ipad*/
+    body{
+        width: 100%;
+    }
+    .leftcol{
+        float: none;
+        margin: auto;
+    }
+    .rightcol{
+        width: 70%;
+        float: none;
+        margin-left: 15%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #maingame{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .datacontainer{
+        width:24%;
+    }
+    #gamedata{
+        width: 80%;
+    }
+    #game{
+        width: 400px;
+        height: 400px;
+        margin-top: 100px;
+    }
+    .img4{
+        height: 100px;
+    }
+    #blackbg{
+        width: 538px;
+    }
+    #login{
+        margin-left: 450px;
+    }
+}
+
+@media(max-width: 767px){/*phone version*/
+    .rightcol,.header{
+        display: none;
+    }
+    .leftcol{
+        width: 100%;
+    }
+    #game{
+        width: 300px;
+        height: 300px;
+        margin-top: 150px;
+    }
+    .img4{
+        height: 75px;
+    }
+    #gamedata{
+        width: 98%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .datacontainer{
+        width: 20%;
+    }
+    #blackbg{
+        width: 100%;
+    }
+    #pausediv{
+        width: 300px;
+        height: 300px;
+    }
+    .pausebtn{
+        margin-top: 10px;
+        width: 47%;
+        margin-left: 2%;
+    }
+    .ranks{
+        width: 300px;
+        height:600px;
+    }
+    .rankbtn{
+        float: none;
+        width: 80%;
+        margin-top: 20px;
+    }
+    .leftcol{
+        height: 100%;
+    }
+    .rankdiv{
+        font-size: 20px;
+        line-height: 50px;
+    }
+    input[type="submit"]{
+        font-size: 10px;
+        margin-left: 5px;
+    }
 }
