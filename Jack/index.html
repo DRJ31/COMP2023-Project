@@ -23,27 +23,37 @@
         <div id="blackbg">
             <div id="pausediv">
                 <h1>You have Paused</h1>
-                <div class="pausebtn">Continue</div>
-                <div class="pausebtn">Menu</div>
-                <div class="pausebtn">Refresh</div>
+                <div class="pausebtn" onclick="continuegame()">Continue</div>
+                <div class="pausebtn" onclick="replay()">Menu</div>
             </div>
-            <div class="ranks">
+            <div id="ranks" class="ranks">
                 <h1>Top List</h1>
                 <form action="insert.php" method="post">
-                <div class="rankdiv">1 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
-                <div class="rankdiv">2 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
-                <div class="rankdiv">3 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
-                <div class="rankdiv">4 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
-                <div class="rankdiv">5 <span class="name">Guest</span> <span class="score">1:00 <input type="submit" value="Upload"> </span></div>
+                <div class="rankdiv">1 <span class="name" id="name0"></span> <span class="score" id="time0"></span></div>
+                <div class="rankdiv">2 <span class="name" id="name1"></span> <span class="score" id="time1"></span></div>
+                <div class="rankdiv">3 <span class="name" id="name2"></span> <span class="score" id="time2"></span></div>
+                <div class="rankdiv">4 <span class="name" id="name3"></span> <span class="score" id="time3"></span></div>
+                <div class="rankdiv">5 <span class="name" id="name4"></span> <span class="score" id="time4"></span></div>
+                    <div class="rankdiv">6 <span class="name" id="name5"></span> <span class="score" id="time5"></span></div>
                 </form>
-                <div class="rankbtn">Replay</div>
-                <div class="rankbtn">Menu</div>
-                <div class="globalbtn">Global Rank</div>
+                <div class="rankbtn" onclick="replay()">Menu</div>
+                <div class="rankbtn" onclick="ranklist(0)">Global Rank</div>
+            </div>
+            <div id="globalrank" class="ranks">
+                <h1>Top List</h1>
+                    <div class="rankdiv">1 <span class="name" id="names0"></span> <span class="score" id="times0"></span></div>
+                    <div class="rankdiv">2 <span class="name" id="names1"></span> <span class="score" id="times1"></span></div>
+                    <div class="rankdiv">3 <span class="name" id="names2"></span> <span class="score" id="times2"></span></div>
+                    <div class="rankdiv">4 <span class="name" id="names3"></span> <span class="score" id="times3"></span></div>
+                    <div class="rankdiv">5 <span class="name" id="names4"></span> <span class="score" id="times4"></span></div>
+                    <div class="rankdiv">6 <span class="name" id="names5"></span> <span class="score" id="times5"></span></div>
+                <div class="rankbtn" onclick="replay()">Menu</div>
+                <div class="rankbtn" onclick="ranklist(1)">Local Rank</div>
             </div>
         </div>
         <!--welcome part and level choosing part-->
         <div id="gametitle">Fruit <span class="titlespan">Pair</span></div>
-        <div id="startbutton" onclick="startgame()"><img src="assest/play.png" alt=""></div>
+        <div id="startbutton" onclick="startgame()"><img src="assest/play.png" id="play" alt=""></div>
 
         <!--game part begin-->
         <!--top bar-->
@@ -51,28 +61,28 @@
             <div class="words">Time</div>
             <div class="datacontainer" id="time">0:00</div>
             <div class="words">Remain</div>
-            <div class="datacontainer" id="remain">5 Pairs</div>
+            <div class="datacontainer" id="remain">8 Pairs</div>
         </div>
-        <div id="pause"><b>||</b></div><!--pause button-->
+        <div id="pause" onclick="pausebtn()"><b>||</b></div><!--pause button-->
 
         <!--main game container-->
         <div id="game">
-            <div class="img4" id="p1"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p2"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p3"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p4"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p5"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p6"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p7"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p8"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p9"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p10"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p11"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p12"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p13"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p14"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p15"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
-            <div class="img4" id="p16"><img src="img/cardback.png" alt="" onclick="cardback(this)"></div>
+            <div class="img4" id="p1"><img src="img/cardback.png" alt="" onclick="cardback(this,'p1')"></div>
+            <div class="img4" id="p2"><img src="img/cardback.png" alt="" onclick="cardback(this,'p2')"></div>
+            <div class="img4" id="p3"><img src="img/cardback.png" alt="" onclick="cardback(this,'p3')"></div>
+            <div class="img4" id="p4"><img src="img/cardback.png" alt="" onclick="cardback(this,'p4')"></div>
+            <div class="img4" id="p5"><img src="img/cardback.png" alt="" onclick="cardback(this,'p5')"></div>
+            <div class="img4" id="p6"><img src="img/cardback.png" alt="" onclick="cardback(this,'p6')"></div>
+            <div class="img4" id="p7"><img src="img/cardback.png" alt="" onclick="cardback(this,'p7')"></div>
+            <div class="img4" id="p8"><img src="img/cardback.png" alt="" onclick="cardback(this,'p8')"></div>
+            <div class="img4" id="p9"><img src="img/cardback.png" alt="" onclick="cardback(this,'p9')"></div>
+            <div class="img4" id="p10"><img src="img/cardback.png" alt="" onclick="cardback(this,'p10')"></div>
+            <div class="img4" id="p11"><img src="img/cardback.png" alt="" onclick="cardback(this,'p11')"></div>
+            <div class="img4" id="p12"><img src="img/cardback.png" alt="" onclick="cardback(this,'p12')"></div>
+            <div class="img4" id="p13"><img src="img/cardback.png" alt="" onclick="cardback(this,'p13')"></div>
+            <div class="img4" id="p14"><img src="img/cardback.png" alt="" onclick="cardback(this,'p14')"></div>
+            <div class="img4" id="p15"><img src="img/cardback.png" alt="" onclick="cardback(this,'p15')"></div>
+            <div class="img4" id="p16"><img src="img/cardback.png" alt="" onclick="cardback(this,'p16')"></div>
         </div>
     </div>
 </div>
