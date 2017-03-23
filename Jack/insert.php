@@ -2,9 +2,9 @@
 $dbhost='';//host
 $dbuser='';//username
 $dbpass='';//password
-$conn=mysqli_connect($dbhost,$dbuser,$dbpass);
+$conn=mysql_connect($dbhost,$dbuser,$dbpass);
 if(!$conn){
-    die('Could not connect: '.mysqli_error($conn));
+    die('Could not connect!');
 }
 $username="Google";
 $score=233;
@@ -12,10 +12,10 @@ $insertdata="INSERT INTO fruit_score".
             "(username, score, date, time)".
             "VALUES".
             "('$username','$score',NOW(),NOW())";
-mysqli_select_db($conn,'demonist');
-$retval=mysqli_query($conn,$insertdata);
+mysql_select_db('demonist');
+$retval=mysql_query($insertdata);
 if(!$retval){
-    die('Could not insert data'.mysqli_error($conn));
+    die('Could not insert data!');
 }
 echo "Success!";
-mysqli_close($conn);
+mysql_close($conn);
