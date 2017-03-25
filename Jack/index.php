@@ -5,7 +5,7 @@
     <title>Fruit Pairs</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
     <link rel="stylesheet" href="assest/style.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <script src="assest/elements.js"></script>
     <script>
         var globalarr=[<?php
@@ -81,7 +81,7 @@
             <div id="ranks" class="ranks">
                 <h1>Top List</h1>
                 <form action="insert.php" method="post">
-                <div class="rankdiv">1 <span class="name" id="name0">GUest</span> <input type="submit" value="Upload" onclick="uploadvalue(0)" id="input0"><span class="score" id="time0">0:30</span></div>
+                <div class="rankdiv">1 <span class="name" id="name0"></span> <input type="submit" value="Upload" onclick="uploadvalue(0)" id="input0"><span class="score" id="time0"></span></div>
                 <div class="rankdiv">2 <span class="name" id="name1"></span> <input type="submit" value="Upload" onclick="uploadvalue(1)" id="input1"><span class="score" id="time1"></span></div>
                 <div class="rankdiv">3 <span class="name" id="name2"></span> <input type="submit" value="Upload" onclick="uploadvalue(2)" id="input2"><span class="score" id="time2"></span></div>
                 <div class="rankdiv">4 <span class="name" id="name3"></span> <input type="submit" value="Upload" onclick="uploadvalue(3)" id="input3"><span class="score" id="time3"></span></div>

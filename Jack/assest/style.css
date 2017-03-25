@@ -21,7 +21,7 @@ button{
     height: 680px;
     z-index:10;
     position: absolute;
-    display: none;
+    /*display: none;*/
 }
 #maingame{/*gamecontainer*/
     height: 680px;
@@ -295,7 +295,7 @@ input[type="text"]{
     bottom:0;
     margin: auto;
     cursor: default;
-    display: none;
+    /*display: none;*/
 }
 
 .ranks h1{
@@ -436,7 +436,7 @@ input[type="submit"]{
     .rankbtn{
         float: none;
         width: 80%;
-        margin-top: 20px;
+        margin-top: 15px;
     }
     .leftcol{
         height: 100%;
@@ -448,5 +448,9 @@ input[type="submit"]{
     input[type="submit"]{
         font-size: 10px;
         margin-left: 5px;
+    }
+    .ranks h1{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
