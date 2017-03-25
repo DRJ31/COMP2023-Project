@@ -158,14 +158,15 @@ function cardback(name,idname){//function while click the card
     else if(countclick==1){//second click
         name.style.display="none";
         if(getid(idname).style.backgroundImage!=choosing){
+            countclick++;
             setTimeout(function () {
                 name.style.display="block";
                 firstone.style.display="block";
+                countclick=0;
             },1000);
-
         }
         else{
-            var num=parseInt(getid("remain").innerHTML.match(regexp));
+            var num=parseInt(getid("remain").innerHTML.match(regexp));//find out number in "n pairs"
             getid("remain").innerHTML=(num-1)+" Pairs";
             if(num==1){//the last pair
                 getid("blackbg").style.display="block";
@@ -176,11 +177,10 @@ function cardback(name,idname){//function while click the card
                 writeresult();
                 rank=[];
                 globalranking();
+                countclick=0;
             }
         }
-        countclick=0;
     }
-
 }
 
 function log_in(){//login function
