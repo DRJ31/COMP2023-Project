@@ -395,6 +395,10 @@ input[type="submit"]{
 }
 
 @media(max-width: 767px){/*phone version*/
+    body{
+	margin-top:-10px;
+	margin-bottom:0;
+    }
     .rightcol,.header{
         display: none;
     }

@@ -9,8 +9,8 @@ var scorearr=[];//score you've got local
 var rank=[];//array which is use to rank scores
 if(screen.width<768) {//auto adjust window height
     window.onload = function () {
-        getid("maingame").style.height = screen.height+"px";
-        getid("blackbg").style.height=screen.height+"px";
+        getid("maingame").style.height = (screen.height-22)+"px";
+        getid("blackbg").style.height=(screen.height-22)+"px";
     };
 }
 function globalranking() {//get global ranking from database

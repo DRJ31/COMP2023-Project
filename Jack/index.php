@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Fruit Pairs</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <link rel="apple-touch-icon" href="https://ols1alctg.qnssl.com/fruit_logo.jpg">
     <link rel="stylesheet" href="assest/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <script src="assest/elements.js"></script>
