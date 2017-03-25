@@ -177,8 +177,8 @@ function cardback(name,idname){//function while click the card
                 writeresult();
                 rank=[];
                 globalranking();
-                countclick=0;
             }
+            countclick=0;
         }
     }
 }
