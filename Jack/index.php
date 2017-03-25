@@ -5,7 +5,7 @@
     <title>Fruit Pairs</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
     <link rel="stylesheet" href="assest/style.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <script src="assest/elements.js"></script>
     <script>
         var globalarr=[<?php
