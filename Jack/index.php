@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Fruit Pairs</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+    <meta name="theme-color" content="rgb(0,205,255)">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <link rel="apple-touch-icon" href="https://ols1alctg.qnssl.com/fruit_logo.jpg">
     <link rel="stylesheet" href="assest/style.css">

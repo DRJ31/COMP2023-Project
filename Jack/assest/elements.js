@@ -177,6 +177,7 @@ function cardback(name,idname){//function while click the card
                 writeresult();
                 rank=[];
                 globalranking();
+                changecolor(1);
             }
             countclick=0;
         }
@@ -197,18 +198,21 @@ function log_out(){//logout function
 }
 
 function pausebtn(){//function of pause
+    changecolor(1);
     getid("blackbg").style.display="block";
     getid("pausediv").style.display="block";
     clearInterval(intervals);
 }
 
 function continuegame(){//function of continue game
+    changecolor(0);
     getid("blackbg").style.display="none";
     getid("pausediv").style.display="none";
     begintime();
 }
 
 function replay(){//go to first page
+    changecolor(0);
     getid("blackbg").style.display="none";
     getid("gamedata").style.display="none";
     getid("game").style.display="none";
@@ -253,4 +257,13 @@ function ranklist(num){//show global score and local score
 function uploadvalue(num){
     getid("uploadname").value=getid("name"+num).innerHTML;
     getid("uploadscore").value=getid("time"+num).innerHTML;
+}
+
+function changecolor(num){//change theme color
+    if(num==1){
+        document.getElementsByName("theme-color")[0].setAttribute("content","rgba(0,0,0,0.8)");
+    }
+    else{
+        document.getElementsByName("theme-color")[0].setAttribute("content","rgb(0,205,255)");
+    }
 }
