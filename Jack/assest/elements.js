@@ -169,7 +169,6 @@ function startgame(num1,number){//function while click start button
         pairremain(number);
         randomsrc(number);
         randomarr=[];
-        rank=[];
         begintime();
     }
 }
@@ -209,6 +208,7 @@ function cardback(name,idname){//function while click the card
                 scorearr[levelnum].push([getid("username").innerHTML,getid("time").innerHTML]);
                 ranking(levelnum);
                 writeresult();
+                rank=[];
                 globalranking(levelnum);
                 changecolor(1);
             }
