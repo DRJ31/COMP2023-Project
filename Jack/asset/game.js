@@ -12,6 +12,16 @@ if(screen.width<768) {//auto adjust window height
     window.onload = function () {
         getid("maingame").style.height = (screen.height-22)+"px";
         getid("blackbg").style.height=(screen.height-22)+"px";
+        var str=prompt("Please input your username","Username");
+        if(str!==null&&str!=="")
+        {
+            getid("username").innerHTML=str;
+            alert("You will be logged in as "+str);
+        }
+        else
+        {
+            alert("You will be logged in as Guest");
+        }
     };
 }
 function writegame(number){//write the inner html of game
