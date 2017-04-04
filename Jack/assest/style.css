@@ -6,6 +6,7 @@ Directory:
 4. game
 5. fixed part
 6. main part
+7. level choosing
 */
 body{
     width: 1024px;
@@ -245,7 +246,17 @@ input[type="text"]{
     float: left;
 }
 
-.img4 img{
+.img2{
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+.img6{
+    width: 16.666%;
+    height: 83.3333px;
+    float: left;
+ }
+.img4 img,.img2 img, .img6 img{
     width: 100%;
 }
 /*game part end*/
@@ -352,7 +363,21 @@ input[type="submit"]{
     margin-top: 10px;
     display: none;
 }
-
+/*level choosing*/
+.chooselevel{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    font-size: 60px;
+    background-color: #fff100;
+    border-radius:8px;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    display: none;
+    cursor: pointer;
+}
 @media(max-width: 1023px){/*for ipad*/
     body{
         width: 100%;
@@ -386,6 +411,12 @@ input[type="submit"]{
     .img4{
         height: 100px;
     }
+    .img6{
+        height: 66.666666px;
+    }
+    .img2{
+        height: 200px;
+    }
     #blackbg{
         width: 538px;
     }
@@ -412,6 +443,12 @@ input[type="submit"]{
     }
     .img4{
         height: 75px;
+    }
+    .img2{
+        height: 150px;
+    }
+    .img6{
+        height: 50px;
     }
     #gamedata{
         width: 98%;
@@ -456,5 +493,10 @@ input[type="submit"]{
     .ranks h1{
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    .chooselevel{
+        height: 50px;
+        font-size: 30px;
+        margin-top: 50px;
     }
 }

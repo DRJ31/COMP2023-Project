@@ -13,9 +13,25 @@ if(screen.width<768) {//auto adjust window height
         getid("blackbg").style.height=(screen.height-22)+"px";
     };
 }
+function writegame(number){//write the inner html of game
+    var content="";
+    for (var i=1;i<=number*number;i++){
+        content+='<div class="img'+number+'" id="p'+i+'"><img src="img/cardback.png" alt="" onclick="cardback(this,\'p'+i+'\')"></div>';
+    }
+    getid("game").innerHTML=content;
+}
+function pairremain(num){//set number in remain
+    getid("remain").innerHTML=num+" pairs";
+}
+function leveltochoose(){//show level choosing part
+    getid("easy").style.display="block";
+    getid("normal").style.display="block";
+    getid("expert").style.display="block";
+    getid("startbutton").style.display="none";
+}
 function globalranking() {//get global ranking from database
     for (var i = 0; i < globalarr.length; i++) {
-        if (rank.length == 0) {
+        if (rank.length === 0) {
             rank.push(globalarr[i]);
         }
         else {
@@ -39,7 +55,7 @@ function globalranking() {//get global ranking from database
 }
 function ranking(){//rank the numbers in array
 for(var i=0;i<scorearr.length;i++) {
-    if (rank.length == 0) {
+    if (rank.length === 0) {
         rank.push(scorearr[i]);
     }
     else {
@@ -65,7 +81,7 @@ function recoverborder() {//recover border of input
 }
 
 function showlogin(){//show login div
-    if(countlogin==0){
+    if(countlogin===0){
         getid("login").style.transform="translate3d(0,170px,0)";
         countlogin++;
     }
@@ -89,12 +105,12 @@ function counttime() {//change time into second
     return calculatetime(times);
 }
 
-function getrandom(){//randomly src photos
-    while(randomarr.length<16){
-        var num=Math.floor(Math.random()*8);
+function getrandom(number){//randomly src photos
+    while(randomarr.length<number*2){
+        var num=Math.floor(Math.random()*number);
         var counter=0;
         for(var j=0;j<randomarr.length;j++){
-            if(num==randomarr[j]){
+            if(num===randomarr[j]){
                 counter++;
             }
         }
@@ -127,35 +143,39 @@ function calculatetime(times){//change second into time
 }
 
 //main part
-function startgame(){//function while click start button
+function startgame(num1,number){//function while click start button
     var judge=confirm("Are you sure you are going to start the game?");
-    if(judge==true){
+    if(judge){
+        getid("easy").style.display="none";
+        getid("normal").style.display="none";
+        getid("expert").style.display="none";
         getid("gametitle").style.display="none";
-        getid("startbutton").style.display="none";
         getid("game").style.display="block";
         getid("gamedata").style.display="block";
         getid("pause").style.display="block";
-        randomsrc();
+        writegame(num1);
+        pairremain(number);
+        randomsrc(number);
         begintime();
     }
 }
 
-function randomsrc(){//function to randomly src photos
-        getrandom();
-        for(var i=1;i<=16;i++){
+function randomsrc(number){//function to randomly src photos
+        getrandom(number);
+        for(var i=1;i<=number*2;i++){
             getid("p"+i).style.backgroundImage='url("img/'+randomarr[i-1]+'.png")';
             getid("p"+i).style.backgroundSize="cover";
         }
 }
 
 function cardback(name,idname){//function while click the card
-    if(countclick==0){//first click
+    if(countclick===0){//first click
         name.style.display="none";
         choosing=getid(idname).style.backgroundImage;
         countclick++;
         firstone=name;
     }
-    else if(countclick==1){//second click
+    else if(countclick===1){//second click
         name.style.display="none";
         if(getid(idname).style.backgroundImage!=choosing){
             countclick++;
@@ -168,7 +188,7 @@ function cardback(name,idname){//function while click the card
         else{
             var num=parseInt(getid("remain").innerHTML.match(regexp));//find out number in "n pairs"
             getid("remain").innerHTML=(num-1)+" Pairs";
-            if(num==1){//the last pair
+            if(num===1){//the last pair
                 getid("blackbg").style.display="block";
                 getid("ranks").style.display="block";
                 clearInterval(intervals);
@@ -244,7 +264,7 @@ function writeresult(){//write result in rank board
 }
 
 function ranklist(num){//show global score and local score
-    if(num==0){
+    if(num===0){
         getid("ranks").style.display="none";
         getid("globalrank").style.display="block";
     }
@@ -260,7 +280,7 @@ function uploadvalue(num){
 }
 
 function changecolor(num){//change theme color
-    if(num==1){
+    if(num===1){
         document.getElementsByName("theme-color")[0].setAttribute("content","rgba(0,0,0,0.8)");
     }
     else{

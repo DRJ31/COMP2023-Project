@@ -110,36 +110,22 @@
         </div>
         <!--welcome part and level choosing part-->
         <div id="gametitle">Fruit <span class="titlespan">Pair</span></div>
-        <div id="startbutton" onclick="startgame()"><img src="assest/play.png" id="play" alt=""></div>
-
+        <div id="startbutton" onclick="leveltochoose()"><img src="assest/play.png" id="play" alt=""></div>
+        <div class="chooselevel" id="easy" onclick="startgame(2,2)">Easy (2x2)</div>
+        <div class="chooselevel" id="normal" onclick="startgame(4,8)">Normal (4x4)</div>
+        <div class="chooselevel" id="expert" onclick="startgame(6,18)">Expert (6X6)</div>
         <!--game part begin-->
         <!--top bar-->
         <div id="gamedata">
             <div class="words">Time</div>
             <div class="datacontainer" id="time">0:00</div>
             <div class="words">Remain</div>
-            <div class="datacontainer" id="remain">8 Pairs</div>
+            <div class="datacontainer" id="remain"></div>
         </div>
         <div id="pause" onclick="pausebtn()"><b>||</b></div><!--pause button-->
 
         <!--main game container-->
         <div id="game">
-            <div class="img4" id="p1"><img src="img/cardback.png" alt="" onclick="cardback(this,'p1')"></div>
-            <div class="img4" id="p2"><img src="img/cardback.png" alt="" onclick="cardback(this,'p2')"></div>
-            <div class="img4" id="p3"><img src="img/cardback.png" alt="" onclick="cardback(this,'p3')"></div>
-            <div class="img4" id="p4"><img src="img/cardback.png" alt="" onclick="cardback(this,'p4')"></div>
-            <div class="img4" id="p5"><img src="img/cardback.png" alt="" onclick="cardback(this,'p5')"></div>
-            <div class="img4" id="p6"><img src="img/cardback.png" alt="" onclick="cardback(this,'p6')"></div>
-            <div class="img4" id="p7"><img src="img/cardback.png" alt="" onclick="cardback(this,'p7')"></div>
-            <div class="img4" id="p8"><img src="img/cardback.png" alt="" onclick="cardback(this,'p8')"></div>
-            <div class="img4" id="p9"><img src="img/cardback.png" alt="" onclick="cardback(this,'p9')"></div>
-            <div class="img4" id="p10"><img src="img/cardback.png" alt="" onclick="cardback(this,'p10')"></div>
-            <div class="img4" id="p11"><img src="img/cardback.png" alt="" onclick="cardback(this,'p11')"></div>
-            <div class="img4" id="p12"><img src="img/cardback.png" alt="" onclick="cardback(this,'p12')"></div>
-            <div class="img4" id="p13"><img src="img/cardback.png" alt="" onclick="cardback(this,'p13')"></div>
-            <div class="img4" id="p14"><img src="img/cardback.png" alt="" onclick="cardback(this,'p14')"></div>
-            <div class="img4" id="p15"><img src="img/cardback.png" alt="" onclick="cardback(this,'p15')"></div>
-            <div class="img4" id="p16"><img src="img/cardback.png" alt="" onclick="cardback(this,'p16')"></div>
         </div>
     </div>
 </div>
