@@ -7,9 +7,9 @@
     <meta name="theme-color" content="rgb(0,205,255)">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <link rel="apple-touch-icon" href="https://ols1alctg.qnssl.com/fruit_logo.jpg">
-    <link rel="stylesheet" href="assest/style.css">
+    <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <script src="assest/elements.js"></script>
+    <script src="asset/game.js"></script>
     <script>
         var globalarr=[[<?php
             function getClientIP()
@@ -148,7 +148,7 @@
         </div>
         <!--welcome part and level choosing part-->
         <div id="gametitle">Fruit <span class="titlespan">Pair</span></div>
-        <div id="startbutton" onclick="leveltochoose()"><img src="assest/play.png" id="play" alt=""></div>
+        <div id="startbutton" onclick="leveltochoose()"><img src="asset/play.png" id="play" alt=""></div>
         <div class="chooselevel" id="easy" onclick="startgame(2,2)">Easy (2x2)</div>
         <div class="chooselevel" id="normal" onclick="startgame(4,8)">Normal (4x4)</div>
         <div class="chooselevel" id="expert" onclick="startgame(6,18)">Expert (6X6)</div>
