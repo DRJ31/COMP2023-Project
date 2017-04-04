@@ -5,8 +5,9 @@ var regexp=/[^\D]\d*/g;//regexp to get numbers in string
 var choosing="";//judge if the first chosen card is the same as the second one
 var countclick=0;//count how many time you have click cards
 var firstone;//element information of first click cardback
-var scorearr=[];//score you've got local
+var scorearr=[[],[],[]];//score you've got local
 var rank=[];//array which is use to rank scores
+var levelnum=0;//judge level
 if(screen.width<768) {//auto adjust window height
     window.onload = function () {
         getid("maingame").style.height = (screen.height-22)+"px";
@@ -29,19 +30,19 @@ function leveltochoose(){//show level choosing part
     getid("expert").style.display="block";
     getid("startbutton").style.display="none";
 }
-function globalranking() {//get global ranking from database
-    for (var i = 0; i < globalarr.length; i++) {
+function globalranking(number) {//get global ranking from database
+    for (var i = 0; i < globalarr[number].length; i++) {
         if (rank.length === 0) {
-            rank.push(globalarr[i]);
+            rank.push(globalarr[number][i]);
         }
         else {
             for (var j = 0; j < rank.length; j++) {
-                if (globalarr[i][1] <= rank[j][1]) {
-                    rank.splice(j, 0, globalarr[i]);
+                if (globalarr[number][i][1] <= rank[j][1]) {
+                    rank.splice(j, 0, globalarr[number][i]);
                     break;
                 }
-                else if (globalarr[i][1] > rank[rank.length - 1][1]) {
-                    rank.push(globalarr[i]);
+                else if (globalarr[number][i][1] > rank[rank.length - 1][1]) {
+                    rank.push(globalarr[number][i]);
                     break;
                 }
             }
@@ -53,19 +54,19 @@ function globalranking() {//get global ranking from database
     }
     rank=[];
 }
-function ranking(){//rank the numbers in array
-for(var i=0;i<scorearr.length;i++) {
+function ranking(number){//rank the numbers in array
+for(var i=0;i<scorearr[number].length;i++) {
     if (rank.length === 0) {
-        rank.push(scorearr[i]);
+        rank.push(scorearr[number][i]);
     }
     else {
         for (var j = 0; j < rank.length; j++) {
-            if (scorearr[i][1] <= rank[j][1]) {
-                rank.splice(j, 0, scorearr[i]);
+            if (scorearr[number][i][1] <= rank[j][1]) {
+                rank.splice(j, 0, scorearr[number][i]);
                 break;
             }
-            else if (scorearr[i][1] > rank[rank.length - 1][1]) {
-                rank.push(scorearr[i]);
+            else if (scorearr[number][i][1] > rank[rank.length - 1][1]) {
+                rank.push(scorearr[number][i]);
                 break;
             }
         }
@@ -141,11 +142,21 @@ function calculatetime(times){//change second into time
     }
     return str;
 }
+function clearrank(){//clear rank in different levels
+    var element1=document.getElementsByClassName("name");
+    var element2=document.getElementsByClassName("score");
+    for(var i=0;i<6;i++){
+        element1[i].innerHTML="";
+        element2[i].innerHTML="";
+        getid("input"+i).style.display="none";
+    }
+}
 
 //main part
 function startgame(num1,number){//function while click start button
     var judge=confirm("Are you sure you are going to start the game?");
     if(judge){
+        clearrank();
         getid("easy").style.display="none";
         getid("normal").style.display="none";
         getid("expert").style.display="none";
@@ -154,8 +165,11 @@ function startgame(num1,number){//function while click start button
         getid("gamedata").style.display="block";
         getid("pause").style.display="block";
         writegame(num1);
+        levelnum=num1/2-1;
         pairremain(number);
         randomsrc(number);
+        randomarr=[];
+        rank=[];
         begintime();
     }
 }
@@ -192,11 +206,10 @@ function cardback(name,idname){//function while click the card
                 getid("blackbg").style.display="block";
                 getid("ranks").style.display="block";
                 clearInterval(intervals);
-                scorearr.push([getid("username").innerHTML,getid("time").innerHTML]);
-                ranking();
+                scorearr[levelnum].push([getid("username").innerHTML,getid("time").innerHTML]);
+                ranking(levelnum);
                 writeresult();
-                rank=[];
-                globalranking();
+                globalranking(levelnum);
                 changecolor(1);
             }
             countclick=0;
@@ -233,6 +246,7 @@ function continuegame(){//function of continue game
 
 function replay(){//go to first page
     changecolor(0);
+    countclick=0;
     getid("blackbg").style.display="none";
     getid("gamedata").style.display="none";
     getid("game").style.display="none";
@@ -277,6 +291,7 @@ function ranklist(num){//show global score and local score
 function uploadvalue(num){
     getid("uploadname").value=getid("name"+num).innerHTML;
     getid("uploadscore").value=getid("time"+num).innerHTML;
+    getid("uploadlevel").value=levelnum;
 }
 
 function changecolor(num){//change theme color

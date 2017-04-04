@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <script src="assest/elements.js"></script>
     <script>
-        var globalarr=[<?php
+        var globalarr=[[<?php
             function getClientIP()
             {
                 global $ip;
@@ -34,7 +34,7 @@
             if (!$conn){
                 die('Could not connect!');
             }
-            $getdata="SELECT * FROM fruit_score";
+            $getdata="SELECT * FROM fruit_score WHERE level=0";
             mysql_select_db('demonist');
             $retval=mysql_query($getdata);
             if(!$retval){
@@ -52,6 +52,7 @@
                     echo "[\"".$arr[$i][0]."\",\"".$arr[$i][1]."\"],";
                 }
             }
+            $arr=array();
             $insertdata="INSERT INTO userinfo".
                 "(useragent, ipaddress, date, time)".
                 "VALUES".
@@ -60,8 +61,44 @@
             if(!$retval){
                 die('Could not insert data!');
             }
-            mysql_close($conn);
-            ?>];
+            ?>],[<?php
+            $getdata="SELECT * FROM fruit_score WHERE level=1";
+            $retval=mysql_query($getdata);
+            if(!$retval){
+                die('Could not get data!');
+            }
+            while($row=mysql_fetch_array($retval,MYSQLI_ASSOC))
+            {
+                array_push($arr,array($row["username"],$row["score"]));
+            }
+            for ($i=0;$i<count($arr);$i++){
+                if($i==count($arr)-1){
+                    echo "[\"".$arr[$i][0]."\",\"".$arr[$i][1]."\"]";
+                }
+                else{
+                    echo "[\"".$arr[$i][0]."\",\"".$arr[$i][1]."\"],";
+                }
+            }
+            $arr=array();
+            ?>],[<?php
+            $getdata="SELECT * FROM fruit_score WHERE level=2";
+            $retval=mysql_query($getdata);
+            if(!$retval){
+                die('Could not get data!');
+            }
+            while($row=mysql_fetch_array($retval,MYSQLI_ASSOC))
+            {
+                array_push($arr,array($row["username"],$row["score"]));
+            }
+            for ($i=0;$i<count($arr);$i++){
+                if($i==count($arr)-1){
+                    echo "[\"".$arr[$i][0]."\",\"".$arr[$i][1]."\"]";
+                }
+                else{
+                    echo "[\"".$arr[$i][0]."\",\"".$arr[$i][1]."\"],";
+                }
+            }
+            ?>]];
     </script>
 </head>
 <body>
@@ -92,6 +129,7 @@
                     <div class="rankdiv">6 <span class="name" id="name5"></span> <input type="submit" value="Upload" onclick="uploadvalue(5)" id="input5"><span class="score" id="time5"></span></div>
                     <input type="text" name="uploadname" style="display: none" id="uploadname">
                     <input type="text" name="uploadscore" style="display: none" id="uploadscore">
+                    <input type="text" name="uploadlevel" style="display: none" id="uploadlevel">
                 </form>
                 <div class="rankbtn" onclick="replay()">Menu</div>
                 <div class="rankbtn" onclick="ranklist(0)">Global Rank</div>

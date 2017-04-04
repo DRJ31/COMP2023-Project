@@ -13,10 +13,11 @@ if(!$conn){
 }
 $username=$_POST["uploadname"];
 $score=$_POST["uploadscore"];
+$level=$_POST["uploadlevel"];
 $insertdata="INSERT INTO fruit_score".
-    "(username, score, date, time)".
+    "(username, score, date, time,level)".
     "VALUES".
-    "('$username','$score',NOW(),NOW())";
+    "('$username','$score',NOW(),NOW(),'$level')";
 mysql_select_db('demonist');
 $retval=mysql_query($insertdata);
 if(!$retval){
