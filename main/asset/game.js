@@ -12,7 +12,7 @@ if(screen.width<768) {//auto adjust window height
     window.onload = function () {
         getid("maingame").style.height = (screen.height-22)+"px";
         getid("blackbg").style.height=(screen.height-22)+"px";
-        var str=prompt("Please input your username","Username");
+        var str=prompt("Please input your username");
         if(str!==null&&str!=="")
         {
             getid("username").innerHTML=str;
