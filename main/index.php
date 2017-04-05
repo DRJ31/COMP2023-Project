@@ -104,7 +104,7 @@
 <body>
 <div class="header">Fruit Pairs <span id="righttext" onclick="showlogin()">Log in</span></div>
 <div id="login">
-    <input type="text" id="getusername" onfocus="changeborder()" onfocusout="recoverborder()" maxlength="10">
+    <input type="text" id="getusername" onfocus="changeborder()" onfocusout="recoverborder()" maxlength="10" placeholder="Username">
     <button class="checkbutton" onclick="log_in()">Login</button>
     <button class="checkbutton" onclick="hidelogin()">Cancel</button>
 </div>
@@ -156,7 +156,7 @@
         <!--top bar-->
         <div id="gamedata">
             <div class="words">Time</div>
-            <div class="datacontainer" id="time">0:00</div>
+            <div class="datacontainer" id="time">00:00</div>
             <div class="words">Remain</div>
             <div class="datacontainer" id="remain"></div>
         </div>

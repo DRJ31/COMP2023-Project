@@ -141,11 +141,17 @@ function calculatetime(times){//change second into time
     var str="";
     var min=Math.floor(times/60);
     var seconds=times%60;
-    if(times%60<10){
+    if(times%60<10&&times<600){
+        str="0"+min+":0"+seconds;
+    }
+    else if(times%60<10){
         str=min+":0"+seconds;
     }
     else if(times<60){
-        str="0:"+times;
+        str="00:"+times;
+    }
+    else if(times<600){
+        str="0"+min+":"+times;
     }
     else{
         str=min+":"+seconds;
