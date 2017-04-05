@@ -151,7 +151,7 @@ function calculatetime(times){//change second into time
         str="00:"+times;
     }
     else if(times<600){
-        str="0"+min+":"+times;
+        str="0"+min+":"+seconds;
     }
     else{
         str=min+":"+seconds;
