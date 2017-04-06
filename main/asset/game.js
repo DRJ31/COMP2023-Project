@@ -1,13 +1,15 @@
 var countlogin=0;//count how many time you have clicked log in
 var randomarr=[];//array of randomly src photos
 var intervals;//id of interval
-var regexp=/[^\D]\d*/g;//regexp to get numbers in string
 var choosing="";//judge if the first chosen card is the same as the second one
 var countclick=0;//count how many time you have click cards
 var firstone;//element information of first click cardback
 var scorearr=[[],[],[]];//score you've got local
+var regexp=/[^\D]\d*/g;//sort out time
 var rank=[];//array which is use to rank scores
 var levelnum=0;//judge level
+var turnedcard=0;//count card you have turned
+var totalcards=0;//number of all the cards
 if(screen.width<768) {//auto adjust window height
     window.onload = function () {
         getid("maingame").style.height = (screen.height-22)+"px";
@@ -31,14 +33,20 @@ function writegame(number){//write the inner html of game
     }
     getid("game").innerHTML=content;
 }
-function pairremain(num){//set number in remain
-    getid("remain").innerHTML=num+" pairs";
-}
 function leveltochoose(){//show level choosing part
-    getid("easy").style.display="block";
-    getid("normal").style.display="block";
-    getid("expert").style.display="block";
-    getid("startbutton").style.display="none";
+    $("#startbutton").addClass("getsmall");
+    setTimeout(function () {
+        $("#startbutton").removeClass("getsmall");
+        getid("startbutton").style.display="none";
+        getid("easy").style.display="block";
+        getid("normal").style.display="block";
+        getid("expert").style.display="block";
+        $("#easy,#normal,#expert").addClass("flowup");
+        setTimeout(function () {
+            $("#easy,#normal,#expert").removeClass("flowup");
+        },500);
+    },450);
+
 }
 function globalranking(number) {//get global ranking from database
     for (var i = 0; i < globalarr[number].length; i++) {
@@ -173,22 +181,37 @@ function startgame(num1,number){//function while click start button
     var judge=confirm("Are you sure you are going to start the game?");
     if(judge){
         clearrank();
-        getid("easy").style.display="none";
-        getid("normal").style.display="none";
-        getid("expert").style.display="none";
-        getid("gametitle").style.display="none";
-        getid("game").style.display="block";
-        getid("gamedata").style.display="block";
-        getid("pause").style.display="block";
+        $("#easy,#normal,#expert").addClass("flowdownout");
+        $("#gametitle").addClass("flowupout");
+        setTimeout(function () {
+            $("#easy,#normal,#expert").removeClass("flowdownout");
+            $("#gametitle").removeClass("flowupout");
+            $("#turnedcards").html("0 turned");
+            getid("easy").style.display="none";
+            getid("normal").style.display="none";
+            getid("expert").style.display="none";
+            getid("gametitle").style.display="none";
+            getid("game").style.display="block";
+            getid("gamedata").style.display="block";
+            getid("pause").style.display="block";
+            $("#game").addClass("flowup");
+            $("#gamedata,#pause").addClass("flowdown");
+            setTimeout(function () {
+                $("#game").removeClass("flowup");
+                $("#gamedata,#pause").removeClass("flowdown");
+            },500);
+        },450);
         writegame(num1);
         levelnum=num1/2-1;
-        pairremain(number);
         randomsrc(number);
+        totalcards=number*2;
         randomarr=[];
         begintime();
     }
 }
-
+function showResults(){//show how many cards you have turned
+    $("#turnedcards").html(turnedcard+" turned");
+}
 function randomsrc(number){//function to randomly src photos
         getrandom(number);
         for(var i=1;i<=number*2;i++){
@@ -199,27 +222,52 @@ function randomsrc(number){//function to randomly src photos
 
 function cardback(name,idname){//function while click the card
     if(countclick===0){//first click
-        name.style.display="none";
+        $(name).addClass("opacback");
+        setTimeout(function () {
+            $(name).removeClass("opacback");
+            name.style.display="none";
+        },450);
         choosing=getid(idname).style.backgroundImage;
         countclick++;
+        turnedcard++;
         firstone=name;
+        showResults();
     }
     else if(countclick===1){//second click
-        name.style.display="none";
-        if(getid(idname).style.backgroundImage!=choosing){
+        $(name).addClass("opacback");
+        setTimeout(function () {
+            $(name).removeClass("opacback");
+            name.style.display="none";
+        },450);
+        turnedcard++;
+        if(getid(idname).style.backgroundImage!==choosing){
             countclick++;
+            showResults();
             setTimeout(function () {
                 name.style.display="block";
                 firstone.style.display="block";
+                $(name).addClass("opac");
+                $(firstone).addClass("opac");
+                setTimeout(function () {
+                    $(name).removeClass("opac");
+                    $(name).removeClass("opac");
+                },500);
                 countclick=0;
+                turnedcard-=2;
+                showResults();
             },1000);
         }
         else{
-            var num=parseInt(getid("remain").innerHTML.match(regexp));//find out number in "n pairs"
-            getid("remain").innerHTML=(num-1)+" Pairs";
-            if(num===1){//the last pair
+            showResults();
+            if(turnedcard===totalcards){//the last pair
                 getid("blackbg").style.display="block";
                 getid("ranks").style.display="block";
+                $("#blackbg").addClass("opac");
+                $("#ranks").addClass("flowup");
+                setTimeout(function () {
+                    $("#blackbg").removeClass("opac");
+                    $("#ranks").removeClass("flowup");
+                },500);
                 clearInterval(intervals);
                 scorearr[levelnum].push([getid("username").innerHTML,getid("time").innerHTML]);
                 ranking(levelnum);
@@ -250,19 +298,32 @@ function pausebtn(){//function of pause
     changecolor(1);
     getid("blackbg").style.display="block";
     getid("pausediv").style.display="block";
+    $("#blackbg").addClass("opac");
+    $("#pausediv").addClass("flowup");
+    setTimeout(function () {
+        $("#blackbg").removeClass("opac");
+        $("#pausediv").removeClass("flowup");
+    },500);
     clearInterval(intervals);
 }
 
 function continuegame(){//function of continue game
     changecolor(0);
-    getid("blackbg").style.display="none";
-    getid("pausediv").style.display="none";
+    $("#blackbg").addClass("opacback");
+    $("#pausediv").addClass("flowdownout");
+    setTimeout(function () {
+        getid("blackbg").style.display="none";
+        getid("pausediv").style.display="none";
+        $("#blackbg").removeClass("opacback");
+        $("#pausediv").removeClass("flowdownout");
+    },450);
     begintime();
 }
 
 function replay(){//go to first page
     changecolor(0);
     countclick=0;
+    turnedcard=0;
     getid("blackbg").style.display="none";
     getid("gamedata").style.display="none";
     getid("game").style.display="none";
@@ -270,7 +331,6 @@ function replay(){//go to first page
     getid("ranks").style.display="none";
     getid("pausediv").style.display="none";
     getid("time").innerHTML="0:00";
-    getid("remain").innerHTML="8 Pairs";
     getid("startbutton").style.display="block";
     getid("gametitle").style.display="block";
     getid("globalrank").style.display="none";
@@ -304,7 +364,7 @@ function ranklist(num){//show global score and local score
     }
 }
 
-function uploadvalue(num){
+function uploadvalue(num){//data upload to php
     getid("uploadname").value=getid("name"+num).innerHTML;
     getid("uploadscore").value=getid("time"+num).innerHTML;
     getid("uploadlevel").value=levelnum;

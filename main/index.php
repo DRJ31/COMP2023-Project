@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="https://ols1alctg.qnssl.com/fruit_logo.jpg">
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <script src="asset/jquery-3.2.0.min.js"></script>
     <script src="asset/game.js"></script>
     <script>
         var globalarr=[[<?php
@@ -147,8 +148,8 @@
             </div>
         </div>
         <!--welcome part and level choosing part-->
-        <div id="gametitle">Fruit <span class="titlespan">Pair</span></div>
-        <div id="startbutton" onclick="leveltochoose()"><img src="asset/play.png" id="play" alt=""></div>
+        <div id="gametitle" class="flowdown">Fruit <span class="titlespan">Pair</span></div>
+        <div id="startbutton" onclick="leveltochoose()" class="flowup"><img src="asset/play.png" id="play" alt=""></div>
         <div class="chooselevel" id="easy" onclick="startgame(2,2)">Easy (2x2)</div>
         <div class="chooselevel" id="normal" onclick="startgame(4,8)">Normal (4x4)</div>
         <div class="chooselevel" id="expert" onclick="startgame(6,18)">Expert (6X6)</div>
@@ -158,7 +159,7 @@
             <div class="words">Time</div>
             <div class="datacontainer" id="time">00:00</div>
             <div class="words">Remain</div>
-            <div class="datacontainer" id="remain"></div>
+            <div class="datacontainer" id="turnedcards">0 turned</div>
         </div>
         <div id="pause" onclick="pausebtn()"><b>||</b></div><!--pause button-->
 

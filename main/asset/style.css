@@ -500,3 +500,96 @@ input[type="submit"]{
         margin-top: 50px;
     }
 }
+
+@keyframes getsmall {
+    0%{
+        transform: none;
+    }
+    10%{
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        transform: scale(0,0);
+    }
+}
+
+.getsmall{/*make button small animate*/
+    transition-timing-function: linear;
+    animation: getsmall 0.5s;
+}
+@keyframes flowup {
+    from{
+        opacity: 0;
+        transform: translate3d(0,50px,0);
+    }
+    to{
+        transform: translate3d(0,0,0);
+    }
+}
+.flowup{/*flow from bottom to top*/
+    transition-timing-function: linear;
+    animation: flowup 0.5s;
+}
+@keyframes flowdown {
+    from{
+        opacity: 0;
+        transform: translate3d(0,-100px,0);
+    }
+    to{
+        transform: translate3d(0,0,0);
+    }
+}
+.flowdown{/*flow from top to bottom*/
+    transition-timing-function: linear;
+    animation: flowdown 0.5s;
+}
+@keyframes flowdownout {
+    from{
+        transform: translate3d(0,0,0);
+    }
+    to{
+        opacity: 0;
+        transform: translate3d(0,100px,0);
+    }
+}
+.flowdownout{
+    transition-timing-function: linear;
+    animation: flowdownout 0.5s;
+}
+@keyframes flowupout {
+    from{
+        transform: translate3d(0,0,0);
+    }
+    to{
+        opacity: 0;
+        transform: translate3d(0,-100px,0);
+    }
+}
+.flowupout{
+    transition-timing-function: linear;
+    animation: flowupout 0.5s;
+}
+@keyframes opac {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.opac{/*opacity go to 1*/
+    transition-timing-function: linear;
+    animation: opac 0.5s;
+}
+@keyframes opacback {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.opacback{/*opacity go to 0*/
+    transition-timing-function: linear;
+    animation: opacback 0.5s;
+}
