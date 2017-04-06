@@ -158,8 +158,8 @@
         <div id="gamedata">
             <div class="words">Time</div>
             <div class="datacontainer" id="time">00:00</div>
-            <div class="words">Remain</div>
-            <div class="datacontainer" id="turnedcards">0 turned</div>
+            <div class="words">Turned</div>
+            <div class="datacontainer" id="turnedcards">0</div>
         </div>
         <div id="pause" onclick="pausebtn()"><b>||</b></div><!--pause button-->
 

@@ -34,6 +34,7 @@ function writegame(number){//write the inner html of game
     getid("game").innerHTML=content;
 }
 function leveltochoose(){//show level choosing part
+    $("#startbutton").removeClass("flowup");
     $("#startbutton").addClass("getsmall");
     setTimeout(function () {
         $("#startbutton").removeClass("getsmall");
@@ -186,7 +187,7 @@ function startgame(num1,number){//function while click start button
         setTimeout(function () {
             $("#easy,#normal,#expert").removeClass("flowdownout");
             $("#gametitle").removeClass("flowupout");
-            $("#turnedcards").html("0 turned");
+            $("#turnedcards").html("0");
             getid("easy").style.display="none";
             getid("normal").style.display="none";
             getid("expert").style.display="none";
@@ -210,7 +211,7 @@ function startgame(num1,number){//function while click start button
     }
 }
 function showResults(){//show how many cards you have turned
-    $("#turnedcards").html(turnedcard+" turned");
+    $("#turnedcards").html(turnedcard);
 }
 function randomsrc(number){//function to randomly src photos
         getrandom(number);
@@ -324,6 +325,7 @@ function replay(){//go to first page
     changecolor(0);
     countclick=0;
     turnedcard=0;
+    $("#startbutton").addClass("flowup");
     getid("blackbg").style.display="none";
     getid("gamedata").style.display="none";
     getid("game").style.display="none";
