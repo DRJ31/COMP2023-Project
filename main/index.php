@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <script src="asset/jquery-3.2.0.min.js"></script>
     <script src="asset/game.js"></script>
+    <script src="asset/jquery.cookie.min.js"></script>
     <script>
         var globalarr=[[<?php
             function getClientIP()
@@ -28,9 +29,9 @@
             $ipadd=getClientIP();
             $ua=$_SERVER['HTTP_USER_AGENT'];
             $arr=array();
-            $dbhost='';//host
-            $dbuser='';//username
-            $dbpass='';//password
+            $dbhost='localhost:3306';//host
+            $dbuser='demonist';//username
+            $dbpass='008691';//password
             $conn=mysql_connect($dbhost,$dbuser,$dbpass);
             if (!$conn){
                 die('Could not connect!');

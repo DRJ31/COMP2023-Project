@@ -10,19 +10,45 @@ var rank=[];//array which is use to rank scores
 var levelnum=0;//judge level
 var turnedcard=0;//count card you have turned
 var totalcards=0;//number of all the cards
+window.onload=function () {
+    if(document.cookie.length!==0){
+        var name=$.cookie("get",{name:"username"});
+        $("#username").html(name);
+        $("#righttext").html("Exit").attr("onclick","log_out()");
+    }
+};
 if(screen.width<768) {//auto adjust window height
     window.onload = function () {
         getid("maingame").style.height = (screen.height-22)+"px";
         getid("blackbg").style.height=(screen.height-22)+"px";
-        var str=prompt("Please input your username");
-        if(str!==null&&str!=="")
-        {
-            getid("username").innerHTML=str;
-            alert("You will be logged in as "+str);
+        if(document.cookie.length===0) {
+            var str = prompt("Please input your username");
+            if (str !== null && str !== "") {
+                getid("username").innerHTML = str;
+                alert("You will be logged in as " + str);
+                $.cookie("set",{duration:1,name:'username',value:str})
+            }
+            else {
+                alert("You will be logged in as Guest");
+            }
         }
-        else
-        {
-            alert("You will be logged in as Guest");
+        else{
+            var judge=confirm("Do you want to log in as "+$.cookie("get",{name:"username"})+"? If not, press cancel to change your account.");
+            if(!judge){
+                $.cookie("delete", {name: 'username'});
+                var str = prompt("Please input your username");
+                if (str !== null && str !== "") {
+                    getid("username").innerHTML = str;
+                    alert("You will be logged in as " + str);
+                    $.cookie("set",{duration:1,name:'username',value:str})
+                }
+                else {
+                    alert("You will be logged in as Guest");
+                }
+            }
+            else{
+                alert("You have logged in as "+$.cookie("get",{name:"username"}));
+            }
         }
     };
 }
@@ -34,8 +60,7 @@ function writegame(number){//write the inner html of game
     getid("game").innerHTML=content;
 }
 function leveltochoose(){//show level choosing part
-    $("#startbutton").removeClass("flowup");
-    $("#startbutton").addClass("getsmall");
+    $("#startbutton").removeClass("flowup").addClass("getsmall");
     setTimeout(function () {
         $("#startbutton").removeClass("getsmall");
         getid("startbutton").style.display="none";
@@ -284,6 +309,7 @@ function cardback(name,idname){//function while click the card
 
 function log_in(){//login function
     getid("username").innerHTML=getid("getusername").value;
+    $.cookie("set",{duration:1,name:'username',value:$("#getusername").val()});
     getid("righttext").innerHTML="Exit";
     getid("righttext").setAttribute("onclick","log_out()");
     getid("getusername").value="";
@@ -291,6 +317,7 @@ function log_in(){//login function
 }
 function log_out(){//logout function
     getid("username").innerHTML="Guest";
+    $.cookie("delete",{name:"username"});
     getid("righttext").setAttribute("onclick","showlogin()");
     getid("righttext").innerHTML="Log in";
 }
