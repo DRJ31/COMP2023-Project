@@ -48,7 +48,7 @@ if(screen.width<768) {//auto adjust window height
             }
             else{
                 alert("You have logged in as "+$.cookie("get",{name:"username"}));
-                $("#username").html(str);
+                $("#username").html($.cookie("get",{name:"username"}));
             }
         }
     };
