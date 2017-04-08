@@ -24,7 +24,7 @@ if(screen.width<768) {//auto adjust window height
         if(document.cookie.length===0) {
             var str = prompt("Please input your username");
             if (str !== null && str !== "") {
-                getid("username").innerHTML = str;
+                $("#username").html(str);
                 alert("You will be logged in as " + str);
                 $.cookie("set",{duration:1,name:'username',value:str})
             }
@@ -38,7 +38,7 @@ if(screen.width<768) {//auto adjust window height
                 $.cookie("delete", {name: 'username'});
                 var str = prompt("Please input your username");
                 if (str !== null && str !== "") {
-                    getid("username").innerHTML = str;
+                    $("#username").html(str);
                     alert("You will be logged in as " + str);
                     $.cookie("set",{duration:1,name:'username',value:str})
                 }
@@ -48,6 +48,7 @@ if(screen.width<768) {//auto adjust window height
             }
             else{
                 alert("You have logged in as "+$.cookie("get",{name:"username"}));
+                $("#username").html(str);
             }
         }
     };
