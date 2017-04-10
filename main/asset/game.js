@@ -246,7 +246,7 @@ function randomsrc(number){//function to randomly src photos
             getid("p"+i).style.backgroundSize="cover";
         }
 }
-
+var check;//check the card clicked info
 function cardback(name,idname){//function while click the card
     if(countclick===0){//first click
         $(name).addClass("opacback");
@@ -254,21 +254,22 @@ function cardback(name,idname){//function while click the card
             $(name).removeClass("opacback");
             name.style.display="none";
         },450);
-        choosing=getid(idname).style.backgroundImage;
-        countclick++;
         turnedcard++;
+        countclick++;
+        check=name;
+        choosing=getid(idname).style.backgroundImage;
         firstone=name;
         showResults();
     }
-    else if(countclick===1){//second click
+    else if(countclick===1&&check!==name){//second click
         $(name).addClass("opacback");
         setTimeout(function () {
             $(name).removeClass("opacback");
             name.style.display="none";
         },450);
         turnedcard++;
+        countclick++;
         if(getid(idname).style.backgroundImage!==choosing){
-            countclick++;
             showResults();
             setTimeout(function () {
                 name.style.display="block";
@@ -305,6 +306,7 @@ function cardback(name,idname){//function while click the card
             }
             countclick=0;
         }
+        check='';
     }
 }
 
