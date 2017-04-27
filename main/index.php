@@ -38,9 +38,9 @@
             $ipadd=getClientIP();
             $ua=$_SERVER['HTTP_USER_AGENT'];
             $arr=array();
-            $dbhost='120.77.38.66:3306';//host
-            $dbuser='demonist';//username
-            $dbpass='008691';//password
+            $dbhost='';//host
+            $dbuser='';//username
+            $dbpass='';//password
             $conn=mysql_connect($dbhost,$dbuser,$dbpass);
             if (!$conn){
                 die('Could not connect!');
