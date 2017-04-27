@@ -8,10 +8,19 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <link rel="apple-touch-icon" href="https://ols1alctg.qnssl.com/fruit_logo.png">
     <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" type="text/css" href="https://ols1alctg.qnssl.com/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <script src="asset/jquery-3.2.0.min.js"></script>
     <script src="asset/game.js"></script>
     <script src="asset/jquery.cookie.min.js"></script>
+    <style type="text/css">
+    	@media(max-width: 767px){
+    		.container{
+    			padding: 0;
+    			margin-top: -10px;
+    		}
+    	}
+    </style>
     <script>
         var globalarr=[[<?php
             function getClientIP()
@@ -29,9 +38,9 @@
             $ipadd=getClientIP();
             $ua=$_SERVER['HTTP_USER_AGENT'];
             $arr=array();
-            $dbhost='';//host
-            $dbuser='';//username
-            $dbpass='';//password
+            $dbhost='120.77.38.66:3306';//host
+            $dbuser='demonist';//username
+            $dbpass='008691';//password
             $conn=mysql_connect($dbhost,$dbuser,$dbpass);
             if (!$conn){
                 die('Could not connect!');
@@ -104,6 +113,7 @@
     </script>
 </head>
 <body>
+<div class="container">
 <div class="header">Fruit Pairs <span id="righttext" onclick="showlogin()">Log in</span></div>
 <div id="login">
     <input type="text" id="getusername" onfocus="changeborder()" onfocusout="recoverborder()" maxlength="10" placeholder="Username">
@@ -187,6 +197,7 @@
         Group I @ SDWI 2017 <br/>
         Version 1.0
     </div>
+</div>
 </div>
 </body>
 </html>

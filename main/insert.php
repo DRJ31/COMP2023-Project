@@ -4,9 +4,9 @@
 </head>
 <body>
 <?php
-$dbhost='';//host
-$dbuser='';//username
-$dbpass='';//password
+$dbhost='120.77.38.66:3306';//host
+$dbuser='demonist';//username
+$dbpass='008691';//password
 $conn=mysql_connect($dbhost,$dbuser,$dbpass);
 if(!$conn){
     die('Could not connect!');
