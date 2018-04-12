@@ -6,9 +6,9 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
     <meta name="theme-color" content="rgb(0,205,255)">
     <meta content="yes" name="apple-mobile-web-app-capable">
-    <link rel="apple-touch-icon" href="https://ols1alctg.qnssl.com/fruit_logo.png">
+    <link rel="apple-touch-icon" href="https://cdn.drjchn.com/fruit_logo.png">
     <link rel="stylesheet" href="asset/style.css">
-    <link rel="stylesheet" type="text/css" href="https://ols1alctg.qnssl.com/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.drjchn.com/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <script src="asset/jquery-3.2.0.min.js"></script>
     <script src="asset/game.js"></script>
